@@ -1,0 +1,96 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='/js/jquery-1.10.2.min.js' type='text/javascript'></script>
+    <script src='/js/highcharts.js' type='text/javascript'></script>
+    <script src='/js/highcharts-more.js' type='text/javascript'></script>
+    <script src='/js/exporting.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id='plotPie' class='rChart highcharts'></div>  
+    
+    <script type='text/javascript'>
+    (function($){
+        $(function () {
+            var chart = new Highcharts.Chart({
+ "dom": "plotPie",
+"width":    800,
+"height":    400,
+"credits": {
+ "text": "@ArthurFlam",
+"href": "http://www.twitter.com/ArthurFlam" 
+},
+"exporting": {
+ "enabled": false 
+},
+"title": {
+ "align": "left",
+"text": "Temps d'exposition" 
+},
+"yAxis": {
+ "title": {
+ "text": null 
+} 
+},
+"series": [
+ {
+ "data": [
+ [
+ "30min-60min",
+    54 
+],
+[
+ "15-30min",
+    59 
+],
+[
+ ">1h",
+    93 
+],
+[
+ "1-15min",
+   350 
+] 
+],
+"type": "pie",
+"name": "Durée de l'exposition",
+"innerSize": "20%",
+"fillOpacity": "80%",
+"center": [ "50%", "50%" ],
+"size": "40%",
+"dataLabels": {
+ "enabled": true 
+},
+"colors": [ "#9ECAE1", "#6BAED6", "#08519C", "#3182BD" ] 
+} 
+],
+"legend": {
+ "symbolWidth":     50 
+},
+"tooltip": {
+ "formatter": function(){return this.y > 1 ? '<b>'+ this.point.name +':</b> '+ Math.round(this.percentage) +'%'  : null;} 
+},
+"id": "plotPie",
+"chart": {
+ "renderTo": "plotPie" 
+} 
+});
+        });
+    })(jQuery);
+</script>
+    
+  </body>
+</html>
