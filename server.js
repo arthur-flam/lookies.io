@@ -11,7 +11,7 @@ app.use(express.static(__dirname));
 //     res.send(html);
 // });
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 3000;
 app.listen(port,function(){
     console.log("Listenning on "+port);
 });
