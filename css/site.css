@@ -1,1 +1,37 @@
 .jumbotron{background-image:url("../triangles.svg");background-repeat:no-repeat;background-position:center;background-size:cover;}
+
+.caps{
+    font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+    padding-left: 0.15em;
+}
+
+h1,h2,h3,h4,h5,h6{
+    text-rendering:optimizelegibility;
+}
+h2,h3,h4,h5,h6{
+    margin:10px;line-height:20px
+}
+.details{
+    color:#2C7FB8;margin: 0 0 10px;
+}
+h4{
+    text-transform:uppercase;letter-spacing: 0.15em;color:#2C7FB8;font-size:15.75px;line-height:22.5px;
+}@media (min-width:768px) and (max-width:979px){h4{font-size:14px;}}
+
+#id{display: block;}
+
+#icons a object,#icons a div{height:75px;width:82px;}
+#icons>.active a{
+    background-color:#f5f5f5;-webkit-border-radius:4px 4px 4px 4px;
+    -moz-border-radius:4px 4px 4px 4px;border-radius:4px 4px 4px 4px;
+}
+#icons>.active a:hover{
+    background-color:#f5f5f5;
+}
+
+.tab-copy{font-family:Georgia,"Times New Roman",Times,serif;font-size:17.5px;font-weight:normal;line-height:30px;}
+.tab-pane{padding-top:1em;}.tab-pane>.tab-copy{height:9em;}
+
+footer{
+    background-color:#eeeeee;position:absolute;left:0;right:0;padding:25px;
+}
